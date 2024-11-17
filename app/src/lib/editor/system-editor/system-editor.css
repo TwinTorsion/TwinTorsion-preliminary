@@ -1,0 +1,25 @@
+.svelte-flow__edge {
+    --xy-edge-stroke-default: var(--main-color);
+    --xy-connectionline-stroke-default: var(--main-color);
+    --xy-connectionline-stroke-hover: var(--main-color);
+    --xy-edge-stroke-selected-default: var(--main-color);
+    --xy-connectionline-stroke-default: var(--main-color);
+    --xy-edge-stroke-width-default: 3;
+}
+
+.svelte-flow__handle {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+}
+
+.svelte-flow__edge.animated path {
+    stroke-dasharray: 10;
+    animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
+    to {
+        stroke-dashoffset: -20;
+    }
+}
